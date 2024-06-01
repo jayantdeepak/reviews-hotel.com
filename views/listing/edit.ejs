@@ -1,0 +1,35 @@
+<% layout("/layout/boilerplate") %>
+<body><h3>Edit your listing</h3>
+    <form method="post" action="/listings/<%=foundlisting._id%>?_method=put" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">title:
+                 <input  class="form-control" name="title"value="<%= foundlisting.title%>">
+            </label>
+        </div>
+        <div class="mb-3">
+            <label for="description"  class="form-label">description
+                <input class="form-control" value="<%= foundlisting.description%> " name="description">
+            </label>
+        </div>
+        <div class="mb-3">
+            <label for="image"  class="form-label">upload image
+                <input class="form-control"  type="file" name="image">
+            </label>
+        </div>
+        <div class="mb-3">
+            <label for="price"  class="form-label">price
+                <input  class="form-control" name="price"value="<%= foundlisting.price%> ">
+            </label>
+        </div>
+        <div class="mb-3">
+            <label for="country"  class="form-label">country
+                <input  class="form-control" name="country" value="<%= foundlisting.country%>">
+            </label>
+        </div>
+        <div class="mb-3">
+            <label for="location"  class="form-label">location
+                <input  class="form-control" name="location"value="<%= foundlisting.location%>">
+            </label>
+        </div><br>
+    <button class=" btn btn-dark add-btn" type="submit">update</button></form>
+</body>

@@ -1,0 +1,41 @@
+<% layout("/layout/boilerplate") %>
+<body><h3>for new listing</h3>
+    <form method="post" enctype="multipart/form-data"  action="/listings/add">
+        <div class="mb-3">
+            <label for="title" class="form-label">title:</label>
+                 <input class="form-control" name="title"placeholder="enter title"  >
+            
+        </div>
+        <div class="mb-3">
+            <label for="description"  class="form-label">description:</label>
+                <input  class="form-control" name="description"placeholder="description">
+            
+        </div>
+        <div class="mb-3">
+            <label for="image"  class="form-label">image:</label>
+                <input type="file" required class="form-control" name="image"placeholder="image url">
+            
+        </div>
+        <div class="mb-3">
+            <label for="price"  class="form-label">price:</label>
+                <input  class="form-control" name="price"placeholder="price"  >
+            
+        </div>
+        <div class="mb-3">
+            <label for="country"  class="form-label">country:</label>
+                <input  class="form-control" name="country"placeholder="country">
+            
+        </div>
+        <div class="mb-3">
+            <label for="location"  class="form-label"> location: </label>
+                <input class="form-control" name="location"placeholder="location" >
+          
+        </div>
+        <br>
+        <button class=" btn btn-dark add-btn">
+            add new listing
+        </button>
+        <br><br>
+     </form>
+   
+</body>

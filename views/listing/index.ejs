@@ -1,0 +1,76 @@
+<% layout("/layout/boilerplate") %>
+
+  <style>
+    #filters{display:flex;
+    flex-wrap:wrap}
+    .filter{
+      text-align: center;
+      margin-right: 2rem;
+      margin-top: 2rem;
+      opacity: 0.7;
+    }
+    .filter:hover{
+      opacity: 1;
+    }
+      
+    
+  </style>
+
+    <!-- <h3>all listing</h3> -->
+    <div id="filters">
+      <div class="filter">
+       <div> <i class="fa-solid fa-fire"></i></div>
+       <p>Trending</p> 
+      </div>
+      <div class="filter">
+        <div> <i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p> 
+       </div>
+       <div class="filter">
+        <div> <i class="fa-solid fa-city"></i></div>
+        <p>City house</p> 
+       </div>
+       <div class="filter">
+        <div> <i class="fa-solid fa-mountain-sun"></i></div>
+        <p>In mountians</p> 
+       </div>
+       <div class="filter">
+        <div> <i class="fa-brands fa-fort-awesome"></i></div>
+        <p>Castles</p> 
+       </div>
+       <div class="filter">
+        <div> <i class="fa-solid fa-water"></i></div>
+        <p>Beach side</p> 
+       </div>
+       <div class="filter">
+        <div> <i class="fa-solid fa-water-ladder"></i></div>
+        <p>Amazing pools</p> 
+       </div>
+       <div class="filter">
+        <div> <i class="fa-solid fa-campground"></i></div>
+        <p>Outdoor camping</p> 
+       </div>
+       <div class="filter">
+        <div> <i class="fa-solid fa-cow"></i></div>
+        <p>Farm house</p> 
+       </div>
+       <div class="filter">
+        <div> <i class="fa-solid fa-snowflake"></i></div>
+        <p>Igloos</p> 
+       </div>
+
+    </div>
+    <div class="row row-col-lg-3 mt-3" > 
+    <% for(let listing of allListings){%>
+        <a class="showLink" href="/listings/<%=listing._id%>">
+    <div class="card listing-card" style="width: 20rem;height: 100%;">
+        <img src="<%=listing.image.url%>" class="card-img-top " >
+        <div class="card-img-overlay"><%=listing.description%></div>
+        <div class="card-body">
+          <p class="card-text"><b><%=listing.title %></b><br>&#x20B9; <%=listing.price.toLocaleString("en-IN")%>/night</p>
+        </div>
+      </div>
+       <% }%>
+    </div></a>
+
+
